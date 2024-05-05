@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = pd.read_csv('vit.txt')
+data = pd.read_csv('resnet.txt')
 
 def plot_confusion_matrix(data, model, split='test'):
     split_data = data[data['data_split'] == split]
@@ -24,4 +24,4 @@ def plot_confusion_matrix(data, model, split='test'):
     plt.title(f'Confusion Matrix for {model} {split.capitalize()} Data')
     plt.show()
 
-plot_confusion_matrix(data, 'ViT', 'test')
+plot_confusion_matrix(data, 'ResNet', 'test')
